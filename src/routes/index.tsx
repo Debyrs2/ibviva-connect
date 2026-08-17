@@ -1,24 +1,50 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { I18nProvider } from "@/i18n";
+import { ThemeProvider } from "@/lib/theme";
+import { Header } from "@/components/site/Header";
+import { Hero } from "@/components/site/Hero";
+import { About } from "@/components/site/About";
+import { Gallery } from "@/components/site/Gallery";
+import { Location } from "@/components/site/Location";
+import { Contact } from "@/components/site/Contact";
+import { Social } from "@/components/site/Social";
+import { Footer } from "@/components/site/Footer";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "Igreja Batista Viva em Piedade | IBVIVA — Jaboatão dos Guararapes";
+const description =
+  "Igreja Batista Viva em Piedade: cultos, mural de fotos, horários, localização e contato por WhatsApp. Você é bem-vindo do jeito que está.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <ThemeProvider>
+      <I18nProvider>
+        <div className="min-h-screen bg-background">
+          <Header />
+          <main>
+            <Hero />
+            <About />
+            <Gallery />
+            <Location />
+            <Contact />
+            <Social />
+          </main>
+          <Footer />
+        </div>
+      </I18nProvider>
+    </ThemeProvider>
   );
 }
