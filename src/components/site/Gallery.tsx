@@ -59,7 +59,7 @@ export function Gallery() {
               ))}
               <div className="absolute inset-x-0 bottom-0 bg-photo-caption p-4 pt-12">
                 <p className="text-sm font-medium text-on-hero">
-                  {t(photos[slide].key as TKey)}
+                  {t(photos[slide]!.key as TKey)}
                 </p>
               </div>
             </div>
@@ -138,8 +138,8 @@ export function Gallery() {
           onClick={() => setLightbox(null)}
         >
           <img
-            src={photos[lightbox].url}
-            alt={t(photos[lightbox].key as TKey)}
+            src={photos[lightbox]!.url}
+            alt={t(photos[lightbox]!.key as TKey)}
             className="max-h-[80vh] w-auto max-w-full rounded-2xl object-contain"
           />
           <button
@@ -150,7 +150,7 @@ export function Gallery() {
             <X className="h-5 w-5" />
           </button>
           <p className="absolute inset-x-0 bottom-6 text-center text-sm text-on-hero-soft">
-            {t(photos[lightbox].key as TKey)}
+            {t(photos[lightbox]!.key as TKey)}
           </p>
         </div>
       ) : null}
