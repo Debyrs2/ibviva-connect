@@ -47,8 +47,7 @@ A identidade visual do site nasce da nossa própria logo: uma **cruz azul com co
 > Preencha esta seção com o que realmente for usado no projeto. Sugestão de estrutura abaixo:
 
 - HTML5, CSS3 e JavaScript
-- [Framework/lib, se houver — ex: React, Next.js, Tailwind CSS]
-- Hospedagem: [ex: Vercel, Netlify, GitHub Pages]
+- Hospedagem: Lovable
 
 ---
 
@@ -61,7 +60,7 @@ git clone https://github.com/seu-usuario/ibviva-landing-page.git
 # Acesse a pasta do projeto
 cd ibviva-landing-page
 
-# Instale as dependências (se houver)
+# Instale as dependências 
 npm install
 
 # Rode o projeto localmente
@@ -69,27 +68,6 @@ npm run dev
 ```
 
 Depois é só abrir [http://localhost:3000](http://localhost:3000) (ou a porta indicada no terminal) no navegador. 🎉
-
----
-
-## 📁 Estrutura do projeto
-
-```
-ibviva-landing-page/
-├── public/
-│   ├── images/        # Fotos da igreja
-│   ├── video/          # Vídeo de abertura
-│   └── logo/            # Logo oficial (cruz azul e amarela)
-├── src/
-│   ├── components/    # Componentes da página (Header, Hero, Mural, Contato...)
-│   ├── locales/         # Traduções (pt-BR, en, es)
-│   ├── styles/           # Estilos e temas (claro/escuro)
-│   └── App.jsx
-├── README.md
-└── package.json
-```
-
-> Ajuste essa estrutura conforme a organização real do seu projeto.
 
 ---
 
@@ -132,7 +110,7 @@ Este projeto foi feito para servir à nossa comunidade, mas sugestões e melhori
 
 ## 📄 Licença
 
-> Defina aqui a licença do projeto (ex: MIT) ou indique que os direitos de uso do conteúdo (fotos, logo, textos) são exclusivos da Igreja Batista Viva em Piedade.
+> Fotos, logo, textos são exclusivos da Igreja Batista Viva em Piedade.
 
 ---
 
