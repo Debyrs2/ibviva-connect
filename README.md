@@ -46,7 +46,7 @@ A identidade visual do site nasce da nossa própria logo: uma **cruz azul com co
 
 > Preencha esta seção com o que realmente for usado no projeto. Sugestão de estrutura abaixo:
 
-- HTML5, CSS3 e JavaScript
+- TypeScript, CSS3 e JavaScript
 - Hospedagem: Lovable
 
 ---
