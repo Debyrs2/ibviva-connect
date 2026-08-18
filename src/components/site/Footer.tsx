@@ -32,12 +32,6 @@ export function Footer() {
           >
             {ADDRESS}
           </a>
-          <a
-            href={`mailto:${EMAIL}`}
-            className="mt-3 block break-all text-sm text-muted-foreground transition-colors hover:text-accent-strong-ink"
-          >
-            {EMAIL}
-          </a>
         </div>
 
         <div>
