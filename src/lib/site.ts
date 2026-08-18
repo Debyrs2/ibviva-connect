@@ -1,18 +1,14 @@
-export const logoUrl = "/assets/logo-transparent.png";
+import logoTransparent from "/assets/logo-transparent.png";
+import p1 from "/assets/IMG-20260816-WA0024.jpg";
+import p3 from "/assets/IMG-20260815-WA0019.jpg";
+import p4 from "/assets/IMG-20260726-WA0038.jpg";
+import p5 from "/assets/image1.jpg";
+import p7 from "/assets/imagem2.jpg";
 
-export const photos = [
-  "/assets/IMG-20260816-WA0024.jpg",
-  "/assets/IMG-20260815-WA0019.jpg",
-  "/assets/IMG-20260726-WA0038.jpg",
-  "/assets/image1.jpg",
-  "/assets/imagem2.jpg"
-] as const;
+export const logoUrl = logoTransparent;
+export const photos = [p1, p3, p4, p5, p7] as const;
 
-export const heroPhotos = [
-  "/assets/IMG-20260816-WA0024.jpg",
-  "/assets/image1.jpg",
-  "/assets/imagem2.jpg"
-];
+export const heroPhotos = [p1, p5, p7];
 
 export const CHURCH_NAME = "Igreja Batista Viva em Piedade";
 export const ADDRESS = "Rua José Brás Moscow, 701, Piedade, Jaboatão dos Guararapes — PE";
