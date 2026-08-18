@@ -34,8 +34,8 @@ export const dictionaries = {
     "about.p1":
       "Somos uma comunidade cristã em Piedade, Jaboatão dos Guararapes. Nos reunimos para adorar a Deus, ouvir a Bíblia e caminhar ao lado uns dos outros nas alegrias e nas dificuldades da vida.",
     "about.p2":
-      "Não existe um jeito certo de chegar até aqui. Seja qual for a sua história, o seu momento ou a sua dúvida, há espaço reservado para você — para orar, para ouvir, ou apenas para tomar um café e conversar com quem se importa.",
-    "about.v1.title": "Fé sem rodeios",
+      "Não existe um jeito certo de chegar até aqui. Seja qual for a sua história, o seu momento ou a sua dúvida, há espaço reservado para você — para orar, para ouvir, falar da palavra de Deus em comunhão.",
+    "about.v1.title": "Mensagem clara sem rodeios",
     "about.v1.text": "A mensagem da Bíblia contada de um jeito claro, para todas as idades.",
     "about.v2.title": "Gente que acolhe",
     "about.v2.text": "Visitantes, famílias e crianças são recebidos com alegria.",
@@ -106,8 +106,8 @@ export const dictionaries = {
     "about.p1":
       "We are a Christian community in Piedade, Jaboatão dos Guararapes. We gather to worship God, listen to the Bible and walk beside one another through the joys and the hardships of life.",
     "about.p2":
-      "There is no right way to arrive here. Whatever your story, your season or your question, there is space saved for you — to pray, to listen, or simply to have a coffee and talk with people who care.",
-    "about.v1.title": "Faith without detours",
+      "There is no right way to arrive here. Whatever your story, your season or your question, there is space saved for you — to pray, to listen, to share the word of God in fellowship.",
+    "about.v1.title": "A clear message, without detours",
     "about.v1.text": "The Bible shared in a clear way, for every age.",
     "about.v2.title": "Warm people",
     "about.v2.text": "Visitors, families and children are welcomed with joy.",
@@ -178,8 +178,8 @@ export const dictionaries = {
     "about.p1":
       "Somos una comunidad cristiana en Piedade, Jaboatão dos Guararapes. Nos reunimos para adorar a Dios, escuchar la Biblia y caminar al lado unos de otros en las alegrías y en las dificultades de la vida.",
     "about.p2":
-      "No existe una forma correcta de llegar hasta aquí. Sea cual sea tu historia, tu momento o tu duda, hay un espacio reservado para ti — para orar, para escuchar, o simplemente para tomar un café y conversar con quien se preocupa.",
-    "about.v1.title": "Fe sin rodeos",
+      "No existe una forma correcta de llegar hasta aquí. Sea cual sea tu historia, tu momento o tu duda, hay un espacio reservado para ti — para orar, para escuchar, hablar de la palabra de Dios en comunión.",
+    "about.v1.title": "Mensaje claro sin rodeos",
     "about.v1.text": "La Biblia contada de forma clara, para todas las edades.",
     "about.v2.title": "Gente que acoge",
     "about.v2.text": "Visitantes, familias y niños son recibidos con alegría.",

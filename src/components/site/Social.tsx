@@ -33,17 +33,16 @@ export function Social() {
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex h-full min-h-[9rem] flex-col justify-between rounded-3xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent-strong hover:shadow-lg"
+              className="group flex h-full min-h-[9rem] flex-col items-center justify-center gap-4 rounded-3xl border border-border bg-card p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent-strong hover:shadow-lg"
             >
-              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-primary/10 text-primary transition-all duration-300 group-hover:bg-accent-strong group-hover:text-accent-strong-foreground">
-                <item.Icon className="h-6 w-6" />
+              <span className="grid h-16 w-16 place-items-center rounded-2xl bg-primary/10 text-primary transition-all duration-300 group-hover:scale-105 group-hover:bg-accent-strong group-hover:text-accent-strong-foreground">
+                <item.Icon className="h-8 w-8" />
               </span>
-              <span className="mt-5">
+              <span>
                 <span className="block font-display text-lg font-semibold text-foreground">
                   {item.name}
                 </span>
-                <span className="block text-sm text-muted-foreground">IBVIVA</span>
-                <span className="mt-3 block text-sm font-semibold text-accent-strong-ink">
+                <span className="mt-2 block text-sm font-semibold text-accent-strong-ink">
                   {t(item.action)} →
                 </span>
               </span>
