@@ -1,13 +1,12 @@
 import { ExternalLink } from "lucide-react";
 import { useI18n } from "@/i18n";
-import { ADDRESS, MAPS_EMBED, MAPS_URL } from "@/lib/site";
+import { ADDRESS, MAPS_EMBED, MAPS_URL, SCHEDULE } from "@/lib/site";
 import { ClockIcon, PinIcon } from "./icons";
 import { Reveal } from "./Reveal";
 
 export function Location() {
   const { t } = useI18n();
 
-  const schedule = ["location.sunday", "location.week", "location.kids"] as const;
 
   return (
     <section id="localizacao" className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
@@ -58,19 +57,21 @@ export function Location() {
                     {t("location.schedule")}
                   </h3>
                   <ul className="mt-3 space-y-2 text-sm">
-                    {schedule.map((item) => (
+                    {SCHEDULE.map((item) => (
                       <li
-                        key={item}
-                        className="flex flex-wrap items-baseline justify-between gap-2 border-b border-border/70 pb-2 last:border-0"
+                        key={`${item.day}-${item.activity}`}
+                        className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b border-border/70 pb-2 last:border-0"
                       >
-                        <span className="font-medium text-foreground">{t(item)}</span>
-                        <span className="text-muted-foreground">{t("location.tbd")}</span>
+                        <span className="min-w-0">
+                          <span className="block font-medium text-foreground">
+                            {t(item.activity)}
+                          </span>
+                          <span className="block text-xs text-muted-foreground">{t(item.day)}</span>
+                        </span>
+                        <span className="font-semibold text-accent-strong-ink">{item.time}</span>
                       </li>
                     ))}
                   </ul>
-                  <p className="mt-3 text-xs italic text-muted-foreground/80">
-                    {t("location.editable")}
-                  </p>
                 </div>
               </div>
             </div>
