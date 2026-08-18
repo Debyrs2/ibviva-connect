@@ -35,7 +35,7 @@ export const dictionaries = {
       "Somos uma comunidade cristã em Piedade, Jaboatão dos Guararapes. Nos reunimos para adorar a Deus, ouvir a Bíblia e caminhar ao lado uns dos outros nas alegrias e nas dificuldades da vida.",
     "about.p2":
       "Não existe um jeito certo de chegar até aqui. Seja qual for a sua história, o seu momento ou a sua dúvida, há espaço reservado para você — para orar, para ouvir, falar da palavra de Deus em comunhão.",
-    "about.v1.title": "Mensagem clara sem rodeios",
+    "about.v1.title": "Mensagem clara",
     "about.v1.text": "A mensagem da Bíblia contada de um jeito claro, para todas as idades.",
     "about.v2.title": "Gente que acolhe",
     "about.v2.text": "Visitantes, famílias e crianças são recebidos com alegria.",
