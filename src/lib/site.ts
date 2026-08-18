@@ -1,9 +1,9 @@
 import logoTransparent from "@/assets/logo-transparent.png";
-import p1 from "@/assets/IMG-20260816-WA0024.jpg.asset.json";
-import p3 from "@/assets/IMG-20260815-WA0019.jpg.asset.json";
-import p4 from "@/assets/IMG-20260726-WA0038.jpg.asset.json";
-import p5 from "@/assets/image1.jpg.asset.json";
-import p7 from "@/assets/image2.jpg.asset.json";
+import p1 from "@/assets/IMG-20260816-WA0024.jpg";
+import p3 from "@/assets/IMG-20260815-WA0019.jpg";
+import p4 from "@/assets/IMG-20260726-WA0038.jpg";
+import p5 from "@/assets/image1.jpg";
+import p7 from "@/assets/imagem2.jpg";
 
 export const logoUrl = logoTransparent;
 
