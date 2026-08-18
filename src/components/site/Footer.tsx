@@ -1,10 +1,9 @@
 import { useI18n } from "@/i18n";
-import { ADDRESS, CHURCH_NAME, EMAIL, MAPS_URL, PHONES, SOCIALS, logoUrl } from "@/lib/site";
-import { FacebookIcon, InstagramIcon, WhatsappIcon, YoutubeIcon } from "./icons";
+import { ADDRESS, CHURCH_NAME, EMAIL, MAPS_URL, SOCIALS, logoUrl } from "@/lib/site";
+import { FacebookIcon, InstagramIcon, YoutubeIcon } from "./icons";
 
 export function Footer() {
   const { t } = useI18n();
-  const waText = encodeURIComponent(t("contact.waMessage"));
 
   return (
     <footer className="border-t border-border bg-surface-muted">
@@ -19,7 +18,6 @@ export function Footer() {
               <span className="block truncate text-xs text-muted-foreground">{CHURCH_NAME}</span>
             </span>
           </div>
-          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{t("footer.made")}</p>
         </div>
 
         <div>
@@ -46,21 +44,12 @@ export function Footer() {
           <h2 className="font-display text-sm font-semibold uppercase tracking-wide text-foreground">
             {t("contact.title")}
           </h2>
-          <ul className="mt-3 space-y-2">
-            {PHONES.map((phone) => (
-              <li key={phone.wa}>
-                <a
-                  href={`https://wa.me/${phone.wa}?text=${waText}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex min-h-11 items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-accent-strong-ink"
-                >
-                  <WhatsappIcon className="h-4 w-4 text-whatsapp" />
-                  {phone.display}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <a
+            href={`mailto:${EMAIL}`}
+            className="mt-3 inline-flex min-h-11 items-center break-all text-sm text-muted-foreground transition-colors hover:text-accent-strong-ink"
+          >
+            {EMAIL}
+          </a>
           <div className="mt-4 flex gap-2">
             {[
               { href: SOCIALS.instagram, Icon: InstagramIcon, label: "Instagram" },

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
-import { useI18n, type TKey } from "@/i18n";
+import { useI18n } from "@/i18n";
 import { photos } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import { Reveal } from "./Reveal";
@@ -9,6 +9,7 @@ export function Gallery() {
   const { t } = useI18n();
   const [slide, setSlide] = useState(0);
   const [lightbox, setLightbox] = useState<number | null>(null);
+  const photoAlt = `${t("gallery.title")} — IBVIVA`;
 
   const go = useCallback((step: number) => {
     setSlide((current) => (current + step + photos.length) % photos.length);
@@ -47,9 +48,9 @@ export function Gallery() {
             <div className="relative aspect-[4/5]">
               {photos.map((photo, i) => (
                 <img
-                  key={photo.url}
-                  src={photo.url}
-                  alt={t(photo.key as TKey)}
+                  key={photo}
+                  src={photo}
+                  alt={photoAlt}
                   loading={i === 0 ? "eager" : "lazy"}
                   className={cn(
                     "absolute inset-0 h-full w-full object-cover transition-opacity duration-700",
@@ -57,11 +58,6 @@ export function Gallery() {
                   )}
                 />
               ))}
-              <div className="absolute inset-x-0 bottom-0 bg-photo-caption p-4 pt-12">
-                <p className="text-sm font-medium text-on-hero">
-                  {t(photos[slide]!.key as TKey)}
-                </p>
-              </div>
             </div>
             <div className="flex items-center justify-between gap-3 p-3">
               <button
@@ -75,7 +71,7 @@ export function Gallery() {
               <div className="flex gap-1.5">
                 {photos.map((photo, i) => (
                   <span
-                    key={photo.url}
+                    key={photo}
                     className={cn(
                       "h-1.5 rounded-full transition-all duration-300",
                       i === slide ? "w-6 bg-accent-strong" : "w-1.5 bg-border",
@@ -100,7 +96,7 @@ export function Gallery() {
           {photos.map((photo, i) => (
             <Reveal
               as="li"
-              key={photo.url}
+              key={photo}
               delay={(i % 3) * 100}
               className={cn(i === 0 && "lg:col-span-2 lg:row-span-2")}
             >
@@ -110,20 +106,14 @@ export function Gallery() {
                 className="group relative block h-full w-full overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
               >
                 <img
-                  src={photo.url}
-                  alt={t(photo.key as TKey)}
+                  src={photo}
+                  alt={photoAlt}
                   loading="lazy"
                   className={cn(
                     "w-full object-cover transition-transform duration-700 group-hover:scale-105",
                     i === 0 ? "aspect-[4/3] lg:h-full" : "aspect-[4/3]",
                   )}
                 />
-                <span className="absolute inset-0 bg-photo-caption opacity-90 transition-opacity duration-500 group-hover:opacity-100" />
-                <span className="absolute inset-x-0 bottom-0 p-5 text-left">
-                  <span className="block text-sm font-medium text-on-hero sm:text-base">
-                    {t(photo.key as TKey)}
-                  </span>
-                </span>
               </button>
             </Reveal>
           ))}
@@ -138,8 +128,8 @@ export function Gallery() {
           onClick={() => setLightbox(null)}
         >
           <img
-            src={photos[lightbox]!.url}
-            alt={t(photos[lightbox]!.key as TKey)}
+            src={photos[lightbox]!}
+            alt={photoAlt}
             className="max-h-[80vh] w-auto max-w-full rounded-2xl object-contain"
           />
           <button
@@ -149,9 +139,6 @@ export function Gallery() {
           >
             <X className="h-5 w-5" />
           </button>
-          <p className="absolute inset-x-0 bottom-6 text-center text-sm text-on-hero-soft">
-            {t(photos[lightbox]!.key as TKey)}
-          </p>
         </div>
       ) : null}
     </section>
