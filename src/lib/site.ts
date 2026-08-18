@@ -1,4 +1,4 @@
-import logo from "@/assets/image.png.asset.json";
+import logoTransparent from "@/assets/logo-transparent.png";
 import p1 from "@/assets/IMG-20260816-WA0024.jpg.asset.json";
 import p2 from "@/assets/IMG-20260726-WA0043.jpg.asset.json";
 import p3 from "@/assets/IMG-20260815-WA0019.jpg.asset.json";
@@ -7,16 +7,16 @@ import p5 from "@/assets/image1.jpg.asset.json";
 import p6 from "@/assets/image3.jpg.asset.json";
 import p7 from "@/assets/image2.jpg.asset.json";
 
-export const logoUrl = logo.url;
+export const logoUrl = logoTransparent;
 
 export const photos = [
-  { url: p1.url, key: "photo1" },
-  { url: p2.url, key: "photo2" },
-  { url: p3.url, key: "photo3" },
-  { url: p4.url, key: "photo4" },
-  { url: p5.url, key: "photo5" },
-  { url: p6.url, key: "photo6" },
-  { url: p7.url, key: "photo7" },
+  p1.url,
+  p2.url,
+  p3.url,
+  p4.url,
+  p5.url,
+  p6.url,
+  p7.url,
 ] as const;
 
 export const heroPhotos = [p1.url, p2.url, p5.url, p7.url];
@@ -28,12 +28,19 @@ export const MAPS_URL =
 export const MAPS_EMBED =
   "https://www.google.com/maps?q=Igreja+Batista+Viva+em+Piedade,+Rua+Jos%C3%A9+Br%C3%A1s+Moscow,+701,+Piedade,+Jaboat%C3%A3o+dos+Guararapes&output=embed";
 export const EMAIL = "Igrejab.viva@gmail.com";
-export const PHONES = [
-  { display: "+55 81 8892-2702", wa: "5581988922702" },
-  { display: "+55 81 9929-6565", wa: "5581992296565" },
-];
 export const SOCIALS = {
   instagram: "https://www.instagram.com/ibviva?igsh=OXgxOGx5a2R1ZjY2",
   facebook: "https://www.facebook.com/share/1LoupHw9tb",
   youtube: "https://www.youtube.com/@ibviva2684",
 };
+
+export const SCHEDULE = [
+  { day: "schedule.tue", activity: "schedule.women", time: "19h30" },
+  { day: "schedule.wed", activity: "schedule.prayer", time: "19h30" },
+  { day: "schedule.thu", activity: "schedule.mixed", time: "19h30" },
+  { day: "schedule.thu", activity: "schedule.ambassadors", time: "19h30" },
+  { day: "schedule.sat", activity: "schedule.youth", time: "19h30" },
+  { day: "schedule.sat", activity: "schedule.couples", time: "20h" },
+  { day: "schedule.sun", activity: "schedule.school", time: "16h30" },
+  { day: "schedule.sun", activity: "schedule.service", time: "18h" },
+] as const;
