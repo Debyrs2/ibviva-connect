@@ -47,9 +47,9 @@ export function Hero() {
         <img
           src={logoUrl}
           alt={CHURCH_NAME}
-          className="h-20 w-20 animate-fade-up rounded-2xl bg-white/90 p-2 shadow-lg sm:h-24 sm:w-24"
+          className="h-20 w-20 animate-fade-up object-contain drop-shadow-lg sm:h-24 sm:w-24"
         />
-        <span className="mt-6 animate-fade-up rounded-full border border-accent-strong/60 bg-accent-strong/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-on-hero-soft [animation-delay:120ms]">
+        <span className="mt-6 animate-fade-up text-xs font-bold uppercase tracking-[0.32em] text-on-hero drop-shadow-[0_0_18px_rgba(255,255,255,0.35)] [animation-delay:120ms]">
           {t("hero.badge")}
         </span>
         <h1 className="mt-5 animate-fade-up font-display text-3xl font-extrabold leading-tight text-on-hero drop-shadow-sm [animation-delay:200ms] sm:text-5xl lg:text-6xl">

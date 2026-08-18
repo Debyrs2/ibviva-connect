@@ -26,7 +26,7 @@ export function About() {
         <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
           {t("about.p2")}
         </p>
-        <p className="mt-4 text-xs italic text-muted-foreground/80">{t("about.editable")}</p>
+        
       </Reveal>
 
       <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
