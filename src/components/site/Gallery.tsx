@@ -98,7 +98,7 @@ export function Gallery() {
               as="li"
               key={photo}
               delay={(i % 3) * 100}
-              className={cn(i === 0 && "lg:col-span-2 lg:row-span-2")}
+              className={cn(i === 0 && "lg:col-span-2")}
             >
               <button
                 type="button"
@@ -110,8 +110,8 @@ export function Gallery() {
                   alt={photoAlt}
                   loading="lazy"
                   className={cn(
-                    "w-full object-cover transition-transform duration-700 group-hover:scale-105",
-                    i === 0 ? "aspect-[4/3] lg:h-full" : "aspect-[4/3]",
+                    "h-full w-full object-cover transition-transform duration-700 group-hover:scale-105",
+                    i === 0 ? "aspect-[16/9] lg:aspect-[2/1]" : "aspect-[4/3]",
                   )}
                 />
               </button>

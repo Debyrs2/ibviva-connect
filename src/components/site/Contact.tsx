@@ -25,7 +25,7 @@ export function Contact() {
           <Reveal>
             <a
               href={`mailto:${EMAIL}`}
-              className="group mx-auto flex max-w-xl flex-col rounded-3xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg sm:p-8"
+              className="group mr-auto flex w-full max-w-xl flex-col rounded-3xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg sm:p-8"
             >
               <span className="grid h-11 w-11 place-items-center rounded-2xl bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
                 <MailIcon className="h-5 w-5" />
